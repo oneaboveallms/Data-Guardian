@@ -1,0 +1,26 @@
+.form-group{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #288ab0;  
+        border-radius: 15px ;  
+          
+}  
+  
+body{
+  text-align: center !important;
+}
+p{
+  margin-top: 20px;
+  font-size: 30px;
+}
+input{
+  text-align: center;
+}
+.mssg{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

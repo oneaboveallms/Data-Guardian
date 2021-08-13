@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Guardian</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="css/landing.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+  <header id="header">
+    <a href="index.html" class="logo">Data Guardian</a>
+    <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+       
+        <li><a href="vote.html">Vote</a></li>
+        <li><a href="result.html">Results</a></li>
+        
+        </ul>
+    </header>
+</head>
+
+<body oncontextmenu="return false;">
+  <div id="nav-placeholder">
+
+  </div>
+
+  <!-- Loader -->
+  
+
+  <!-- Content   -->
+  <div id="content" style="display: none;">
+    <div class="container" id="votingPage">
+      <div class="row" id="check-web3" style="margin-top: 30px;"></div>
+      <div class="row">
+        
+        <div class="col-lg-6 col-sm-12">
+          <div >
+            <table class="table table-responsive table-borderless table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Candidate Name</th>
+                  <th>Party</th>
+                  <th>Constituency</th>
+                  <th>Vote</th>
+                </tr>
+              </thead>
+              <tbody id="candidatesResults">
+              </tbody>
+            </table>
+            <hr />
+            
+           
+          </div>
+          
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img src="img/election.png" width="100%" height="100%" alt="">
+        </div>
+      </div><br>
+      <div class="row" id="vote-msg" style="margin-top: 30px;">
+      </div>
+    </div>
+
+
+
+  </div>
+  <script src="js/navbar.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+  if (typeof web3 !== 'undefined') {
+    if (web3.currentProvider.isMetaMask === true) {
+      console.log('MetaMask is active')
+    } else {
+      $('#check-web3').html(`<div class="alert alert-danger text-center" role="alert">
+          <span>Please Install Metamask for voting</span>
+        </div>`)
+    }
+  } else {
+    console.log('web3 is not found')
+  }
+})
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

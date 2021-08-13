@@ -1,0 +1,52 @@
+<! doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Data Guardian</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header id="header">
+<a href="index.html" class="logo">Data Guardian</a>
+<ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="vote.html">Vote</a></li>
+    <li><a href="result.html">Results</a></li>
+    </ul>
+</header>
+<section>
+	<h2 id="text"><span>Blockchain Based Voting System</span><br>Data Guardian</h2>
+	<img src="img/cloud.png" id="cloud">
+	<img src="img/parliament.png" id="parliament">
+	<a href="vote.html" id="btn">Cast Your Vote</a>
+	<img src="img/vote.png" id="vote">
+	<img src="img/road.png" id="road">
+</section>
+<div class="sec"><h2>About</h2>
+		<p>Voting is the fundamental right for every nation. An Electronic Voting (E-Voting) system is a voting system in which the election process is notated, saved, stored, and processed digitally, which makes the voting management task better than the traditional paper-based method. Blockchain is offering new opportunities to develop new types of digital services.<br> While research on the topic is still emerging, it has mostly focused on the technical and legal issues instead of taking advantage of this novel concept and creating advanced digital services. Blockchain-enabled evoting (BEV) could reduce voter fraud and increase voter access. Eligible voters cast a ballot anonymously using a computer or smartphone.<br> BEV uses an encrypted key and tamper-proof personal IDs. Electronic credibility services have become an integral part of the information space. <br> With the reliable implementation of basic services as an electronic signature and electronic authentication, it is possible to build more complex systems that rely on them, particularly the electronic voting system. In this project, the concept of developing an electronic voting system using blockchain technology is implemented. The two-level architecture provides a secure voting process without redundancy of existing (not based on blockchain) systems. The blockchain-based voting project has two modules to make the whole project integrated and work along. One will be the Election Commission who will be responsible for creating elections, adding registered parties and candidates contesting for the election added under the smart contracts. The other end will be the voter's module where each individual can cast a vote for their respective Assembly Constituency and the vote will be registered on the blockchain to make it tamper proof.</p>
+</div>
+
+</div>
+	<script>
+		let text = document.getElementById('text');
+		let cloud = document.getElementById('cloud');
+		let btn = document.getElementById('btn');
+		let vote = document.getElementById('vote');
+		let parliament = document.getElementById('parliament');
+		let road = document.getElementById('road');
+		let header = document.getElementById('header');
+
+		window.addEventListener('scroll', function(){
+			let value = window.scrollY;
+		
+			text.style.top = 60 + value * -0.5 + '%';
+			cloud.style.left = value * 3 + 'px';
+			btn.style.marginTop = value * 1.5 + 'px';
+			vote.style.top = value * -0.12 + 'px';
+			parliament.style.top = value * 0.25 + 'px';
+			header.style.top = value * 0.5 + 'px';
+		})
+	</script>
+</body>
+</html>
